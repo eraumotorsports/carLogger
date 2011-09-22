@@ -18,6 +18,12 @@ unsigned long rateOld, old1, old2, old3, old4, delta;
 float updateHz = 5;
 float updateMillis = 1000 / updateHz;
 
+// Set current gain
+double gain = 51.0;
+double gain2 = 0.0048828125;
+
+// Current variables
+double input, current;
 
 void setup()
 {
@@ -79,8 +85,11 @@ void loop()
         else
             oldCnt4 = cnt4;
         
-        // Print the current wheel speeds
-        printRPMs(rpm1, rpm2, rpm3, rpm4);
+        // Measure the current
+        current = measureCurrent(0);
+
+        // Print the current wheel speeds and current
+        printVals();
         rateOld = millis();
     }
 }
@@ -100,8 +109,15 @@ boolean wheelStopped(int newCnt, int oldCnt)
         return false;
 }
 
+// Measures the current
+double measureCurrent(int input)
+{
+    input = analogRead(input);
+    return ( ( (input / gain) * gain2) / (2.0/3.0) ) * 1000;
+}
+
 // Print the wheel speeds
-void printRPMs(int rpm1, int rpm2, int rpm3, int rpm4)
+void printVals()
 {
     Serial.print(millis(),DEC);
     Serial.print(":");
@@ -111,7 +127,9 @@ void printRPMs(int rpm1, int rpm2, int rpm3, int rpm4)
     Serial.print(",");
     Serial.print(rpm3,DEC);
     Serial.print(",");
-    Serial.println(rpm4,DEC);
+    Serial.print(rpm4,DEC);
+    Serial.print(",");
+    Serial.println(current,DEC);
 }
 
 void rpm_inc1()
