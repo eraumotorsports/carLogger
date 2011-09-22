@@ -92,7 +92,7 @@ float timeConst(long oldTime)
 }
 
 // Determine if wheel stopped
-boolean wheelStopped(long newCnt, long oldCnt)
+boolean wheelStopped(int newCnt, int oldCnt)
 {
     if ((newCnt - oldCnt) <= stopCount )
         return true;
