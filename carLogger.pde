@@ -20,7 +20,7 @@ float updateMillis = 1000 / updateHz;
 
 // Set current gain
 double gain = 51.0;
-double gain2 = 0.0048828125;
+double voltStep = 5.0 / 1024.0;     // 5 volts / 10 bit precission = 1024
 
 // Current variables
 double input, current;
@@ -113,7 +113,7 @@ boolean wheelStopped(int newCnt, int oldCnt)
 double measureCurrent(int input)
 {
     input = analogRead(input);
-    return ( ( (input / gain) * gain2) / (2.0/3.0) ) * 1000;
+    return ( ( (input / gain) * voltStep) / (2.0/3.0) ) * 1000;
 }
 
 // Print the wheel speeds
