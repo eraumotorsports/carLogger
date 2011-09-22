@@ -8,6 +8,9 @@ unsigned int rpm1, rpm2, rpm3, rpm4;
 // The minimum pulse count before the rpm is updated
 unsigned int minCount = 8;
 
+// The number of pulses that is considered stopped
+unsigned int stopCount = 3;
+
 // Timing variables the hold milli counts
 unsigned long rateOld, old1, old2, old3, old4, delta;
 
@@ -40,30 +43,41 @@ void loop()
     if (delta >= updateMillis)
     {
         // Only update the wheel rpm if the minCount has been met
-        if (cnt1 >= minCount)
+        if (cnt1 >= minCount || wheelStopped(cnt1, oldCnt1))
         {
             rpm1 = timeConst(old1) * cnt1;           
             cnt1 = 0;
             old1 = millis();
         }
-        if (cnt2 >= minCount)
+        else
+            oldCnt1 = cnt1;
+
+        if (cnt2 >= minCount || wheelStopped(cnt2, oldCnt2))
         {
             rpm2 = timeConst(old2) * cnt2;
             cnt2 = 0;
             old2 = millis();
         }
-        if (cnt3 >= minCount)
+        else
+            oldCnt2 = cnt2;
+  
+        if (cnt3 >= minCount || wheelStopped(cnt3, oldCnt3))
         {
             rpm3 = timeConst(old3) * cnt3;
             cnt3 = 0;
             old3 = millis();
         }
-        if (cnt4 >= minCount)
+        else
+            oldCnt3 = cnt3;
+
+        if (cnt4 >= minCount || wheelStopped(cnt4, oldCnt4))
         {
             rpm4 = timeConst(old4) * cnt4;
             cnt4 = 0;
             old4 = millis();
         }
+        else
+            oldCnt4 = cnt4;
         
         // Print the current wheel speeds
         printRPMs(rpm1, rpm2, rpm3, rpm4);
@@ -75,6 +89,15 @@ void loop()
 float timeConst(long oldTime)
 {
     return 1.875 * 1000 / (millis() - oldTime);
+}
+
+// Determine if wheel stopped
+boolean wheelStopped(long newCnt, long oldCnt)
+{
+    if ((newCnt - oldCnt) <= stopCount )
+        return true;
+    else
+        return false;
 }
 
 // Print the wheel speeds
