@@ -40,6 +40,8 @@ void setup()
     rpm1 = rpm2 = rpm3 = rpm4 = 0;
     old1 = old2 = old3 = old4 = 0;
     rateOld = 0;
+
+    Serial.println("ms,1-FrontLeft,2-FrontRight,3-RearLeft,4-RearRight,Current");
 }
 
 void loop()
@@ -120,7 +122,7 @@ double measureCurrent(int input)
 void printVals()
 {
     Serial.print(millis(),DEC);
-    Serial.print(":");
+    Serial.print(",");
     Serial.print(rpm1,DEC);
     Serial.print(",");
     Serial.print(rpm2,DEC);
