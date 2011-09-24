@@ -112,9 +112,9 @@ boolean wheelStopped(int newCnt, int oldCnt)
 }
 
 // Measures the current
-double measureCurrent(int input)
+double measureCurrent(int channel)
 {
-    input = analogRead(input);
+    input = analogRead(channel);
     return ( ( (input / gain) * voltStep) / (2.0/3.0) ) * 1000;
 }
 
