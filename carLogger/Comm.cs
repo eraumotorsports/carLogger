@@ -23,7 +23,7 @@ namespace carLogger
             }
             catch
             {
-                MessageBox.Show("Could not open " + _config.Com_Port.ToString(), "Comm Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                //MessageBox.Show("Could not open " + _config.Com_Port.ToString(), "Comm Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

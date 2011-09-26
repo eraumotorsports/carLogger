@@ -140,5 +140,11 @@ namespace carLogger
             //LogMessage("Goodbye!");
             Form1.ActiveForm.Close();
         }
+
+        private void serialPortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CommSetup cs = new CommSetup();
+            cs.Show();
+        }
     }
 }
