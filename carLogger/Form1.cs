@@ -8,6 +8,7 @@ using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using System.Threading;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace carLogger
 {
@@ -41,6 +42,7 @@ namespace carLogger
                 mpLogFile = File.Open("log.txt", FileMode.Append, FileAccess.Write);
                 mpLogStream = new StreamWriter(mpLogFile);
                 mpLogStream.AutoFlush = true;
+                mConfig.PropertyChanged += new PropertyChangedEventHandler(configurationChanged);
             }
             catch (System.IO.IOException)
             {
@@ -72,7 +74,8 @@ namespace carLogger
             while (updateActive)
             {
                 result = mComm.ReadLine();
-                //ComLog(STATUS,result);
+                result = result.Replace("\r", "");
+                ComLog(result);
                 if (result == "COMM ERROR" || result == "TIMEOUT")
                 {
                     mCommError = true;
@@ -91,7 +94,7 @@ namespace carLogger
                         mFLrpm = Int32.Parse(status[1]);
 
                         //Front Right
-                        mRLrpm = Int32.Parse(status[2]);
+                        mFRrpm = Int32.Parse(status[2]);
 
                         //Rear Left
                         mRLrpm = Int32.Parse(status[3]);
@@ -100,7 +103,14 @@ namespace carLogger
                         mRRrpm = Int32.Parse(status[4]);
 
                         //Current
-                        mCurrent = Double.Parse(status[5]);
+                        try
+                        {
+                            mCurrent = Double.Parse(status[5]);
+                        }
+                        catch (Exception ex)
+                        {
+                            mCurrent = 0;
+                        }
                     }
                     else
                     {
@@ -121,7 +131,9 @@ namespace carLogger
         public void UpdateDisplay()
         {
             lblCommError.Visible = mCommError;
+            lblCommPort.Text = mConfig.Com_Port;
             UpdateRPMs();
+            //ClearOldChartPoints();
         }
 
         public void UpdateRPMs()
@@ -133,7 +145,7 @@ namespace carLogger
         }
         #endregion
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void ExitProcedure()
         {
             updateActive = false;
             mTempThread.Join();
@@ -144,7 +156,29 @@ namespace carLogger
         private void serialPortToolStripMenuItem_Click(object sender, EventArgs e)
         {
             CommSetup cs = new CommSetup();
+            cs.Changed += new EventHandler(commChanged);
             cs.Show();
         }
+
+        public void ComLog(string response)
+        {
+            mpLogStream.WriteLine("[" + System.DateTime.Now + "] " + response);
+        }
+
+        public void configurationChanged(object sender, PropertyChangedEventArgs e)
+        {
+            MessageBox.Show("Configuration Changed!");
+        }
+
+        public void commChanged(object sender, EventArgs e)
+        {
+            mComm.RefreshSettings();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExitProcedure();
+        }
+
     }
 }

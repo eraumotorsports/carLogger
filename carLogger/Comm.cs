@@ -29,6 +29,15 @@ namespace carLogger
 
         #region Member Functions
 
+        // Refresh Port Settings
+        public void RefreshSettings()
+        {
+            _serialPort.Close();
+            _serialPort.PortName = _config.Com_Port;
+            _serialPort.BaudRate = _config.Baud_Rate;
+            _serialPort.ReadTimeout = _config.Timeout;
+            _serialPort.Open();
+        }
         // Sends a command and returns the response
         public string SendCommand(string command)
         {

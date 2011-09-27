@@ -2,11 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Net;
+using System.ComponentModel;
 
 namespace carLogger
 {
-    public class Configuration
+    public class Configuration : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void NotifyPropertyChanged(String info)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
+            }
+        }
+
         #region Properties
         public string Com_Port
         {
@@ -15,6 +26,7 @@ namespace carLogger
             {
                 Properties.Settings.Default.com_port = value;
                 Properties.Settings.Default.Save();
+                NotifyPropertyChanged("CommPort");
             }
         }
         public int Baud_Rate
@@ -24,6 +36,7 @@ namespace carLogger
             {
                 Properties.Settings.Default.baud_rate = value;
                 Properties.Settings.Default.Save();
+                NotifyPropertyChanged("BaudRate");
             }
         }
         public int Timeout
