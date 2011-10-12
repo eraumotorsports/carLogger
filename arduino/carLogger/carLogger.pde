@@ -25,17 +25,29 @@ double voltStep = 5.0 / 1024.0;     // 5 volts / 10 bit precission = 1024
 // Current variables
 double input, current;
 
-boolean testMode = true;
+boolean testMode = false;
 
 void setup()
 {
     Serial.begin(9600);
 
+    // Set inputs
+    pinMode(21, INPUT);
+    pinMode(20, INPUT);
+    pinMode(19, INPUT);
+    pinMode(18, INPUT);
+
+    // Enable pullup resistors
+    digitalWrite(21, HIGH);
+    digitalWrite(20, HIGH);
+    digitalWrite(19, HIGH);
+    digitalWrite(18, HIGH);
+
     // Setup the interrupts
-    attachInterrupt(2, rpm_inc1, RISING); //pin 21
-    attachInterrupt(3, rpm_inc2, RISING); //pin 20
-    attachInterrupt(4, rpm_inc3, RISING); //pin 19
-    attachInterrupt(5, rpm_inc4, RISING); //pin 18
+    attachInterrupt(2, rpm_inc1, FALLING); //pin 21
+    attachInterrupt(3, rpm_inc2, FALLING); //pin 20
+    attachInterrupt(4, rpm_inc3, FALLING); //pin 19
+    attachInterrupt(5, rpm_inc4, FALLING); //pin 18
     
     // Zero out all the variables
     cnt1 = cnt2 = cnt3 = cnt4 = 0;
@@ -54,42 +66,42 @@ void loop()
     {
         if (!testMode)
         {
-        // Only update the wheel rpm if the minCount has been met
-        if (cnt1 >= minCount || wheelStopped(cnt1, oldCnt1))
-        {
-            rpm1 = timeConst(old1) * cnt1;           
-            cnt1 = 0;
-            old1 = millis();
-        }
-        else
-            oldCnt1 = cnt1;
+            // Only update the wheel rpm if the minCount has been met
+            if (cnt1 >= minCount || wheelStopped(cnt1, oldCnt1))
+            {
+                rpm1 = timeConst(old1) * cnt1;           
+                cnt1 = 0;
+                old1 = millis();
+            }
+            else
+                oldCnt1 = cnt1;
 
-        if (cnt2 >= minCount || wheelStopped(cnt2, oldCnt2))
-        {
-            rpm2 = timeConst(old2) * cnt2;
-            cnt2 = 0;
-            old2 = millis();
-        }
-        else
-            oldCnt2 = cnt2;
-  
-        if (cnt3 >= minCount || wheelStopped(cnt3, oldCnt3))
-        {
-            rpm3 = timeConst(old3) * cnt3;
-            cnt3 = 0;
-            old3 = millis();
-        }
-        else
-            oldCnt3 = cnt3;
+            if (cnt2 >= minCount || wheelStopped(cnt2, oldCnt2))
+            {
+                rpm2 = timeConst(old2) * cnt2;
+                cnt2 = 0;
+                old2 = millis();
+            }
+            else
+                oldCnt2 = cnt2;
+      
+            if (cnt3 >= minCount || wheelStopped(cnt3, oldCnt3))
+            {
+                rpm3 = timeConst(old3) * cnt3;
+                cnt3 = 0;
+                old3 = millis();
+            }
+            else
+                oldCnt3 = cnt3;
 
-        if (cnt4 >= minCount || wheelStopped(cnt4, oldCnt4))
-        {
-            rpm4 = timeConst(old4) * cnt4;
-            cnt4 = 0;
-            old4 = millis();
-        }
-        else
-            oldCnt4 = cnt4;
+            if (cnt4 >= minCount || wheelStopped(cnt4, oldCnt4))
+            {
+                rpm4 = timeConst(old4) * cnt4;
+                cnt4 = 0;
+                old4 = millis();
+            }
+            else
+                oldCnt4 = cnt4;
 		}
 		else
 		{
