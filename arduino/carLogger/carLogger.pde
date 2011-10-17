@@ -1,3 +1,5 @@
+#include <WiFly.h>
+
 // Hold the pulse counts for each wheel
 volatile unsigned int cnt1, cnt2, cnt3, cnt4;
 unsigned int oldCnt1, oldCnt2, oldCnt3, oldCnt4;
@@ -27,9 +29,82 @@ double input, current;
 
 boolean testMode = false;
 
+// Calculates the time constant based on previous milli
+float timeConst(long oldTime)
+{
+    return 1.875 * 1000 / (millis() - oldTime);
+}
+
+// Determine if wheel stopped
+boolean wheelStopped(int newCnt, int oldCnt)
+{
+    if ((newCnt - oldCnt) <= stopCount )
+        return true;
+    else
+        return false;
+}
+
+// Measures the current
+double measureCurrent(int channel)
+{
+    input = analogRead(channel);
+    return ( ( (input / gain) * voltStep) / (2.0/3.0) ) * 1000;
+}
+
+// Print the wheel speeds
+void printVals()
+{
+    Serial.print(millis(),DEC);
+    Serial.print(",");
+    Serial.print(rpm1,DEC);
+    Serial.print(",");
+    Serial.print(rpm2,DEC);
+    Serial.print(",");
+    Serial.print(rpm3,DEC);
+    Serial.print(",");
+    Serial.print(rpm4,DEC);
+    Serial.print(",");
+    Serial.println(current,DEC);
+}
+
+void rpm_inc1()
+{
+    cnt1++;
+}
+
+void rpm_inc2()
+{
+    cnt2++;
+}
+
+void rpm_inc3()
+{
+    cnt3++;
+}
+
+void rpm_inc4()
+{
+    cnt4++;
+}
+
+int testData(int offset)
+{
+    return 400 * cos(.001 * millis() + (offset * 100)) + 400;
+}
+
 void setup()
 {
+    WiFly.begin();
+
+    if (!WiFly.join("eraumotorsports")) {
+        while (1) {
+            // Hang on failure.
+        }
+    }
+
     Serial.begin(9600);
+    Serial.print("IP: ");
+    Serial.println(WiFly.ip());
 
     // Set inputs
     pinMode(21, INPUT);
@@ -54,8 +129,6 @@ void setup()
     rpm1 = rpm2 = rpm3 = rpm4 = 0;
     old1 = old2 = old3 = old4 = 0;
     rateOld = 0;
-
-    Serial.println("ms,1-FrontLeft,2-FrontRight,3-RearLeft,4-RearRight,Current");
 }
 
 void loop()
@@ -118,69 +191,6 @@ void loop()
         printVals();
         rateOld = millis();
     }
-}
-
-// Calculates the time constant based on previous milli
-float timeConst(long oldTime)
-{
-    return 1.875 * 1000 / (millis() - oldTime);
-}
-
-// Determine if wheel stopped
-boolean wheelStopped(int newCnt, int oldCnt)
-{
-    if ((newCnt - oldCnt) <= stopCount )
-        return true;
-    else
-        return false;
-}
-
-// Measures the current
-double measureCurrent(int channel)
-{
-    input = analogRead(channel);
-    return ( ( (input / gain) * voltStep) / (2.0/3.0) ) * 1000;
-}
-
-// Print the wheel speeds
-void printVals()
-{
-    Serial.print(millis(),DEC);
-    Serial.print(",");
-    Serial.print(rpm1,DEC);
-    Serial.print(",");
-    Serial.print(rpm2,DEC);
-    Serial.print(",");
-    Serial.print(rpm3,DEC);
-    Serial.print(",");
-    Serial.print(rpm4,DEC);
-    Serial.print(",");
-    Serial.println(current,DEC);
-}
-
-void rpm_inc1()
-{
-    cnt1++;
-}
-
-void rpm_inc2()
-{
-    cnt2++;
-}
-
-void rpm_inc3()
-{
-    cnt3++;
-}
-
-void rpm_inc4()
-{
-    cnt4++;
-}
-
-int testData(int offset)
-{
-    return 400 * cos(.001 * millis() + (offset * 100)) + 400; 
 }
 // vim: syntax=c
 
