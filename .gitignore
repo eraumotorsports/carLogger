@@ -1,3 +1,4 @@
 carLogger/bin
 carLogger/obj
 *.suo
+build-cli/
