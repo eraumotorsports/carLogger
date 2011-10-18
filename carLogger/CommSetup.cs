@@ -23,12 +23,8 @@ namespace carLogger
         private void CommSetup_Load(object sender, EventArgs e)
         {
             mConfig = new Configuration();
-            cmbPorts.Text = mConfig.Com_Port;
-
-            foreach (string s in SerialPort.GetPortNames())
-            {
-                cmbPorts.Items.Add(s);
-            }
+            txtHostname.Text = mConfig.Hostname;
+            txtPort.Text = mConfig.Port.ToString();
         }
 
         protected virtual void OnChanged(EventArgs e)
@@ -39,17 +35,10 @@ namespace carLogger
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (cmbPorts.Items.Contains(cmbPorts.Text))
-            {
-                mConfig.Com_Port = cmbPorts.Text;
-                OnChanged(EventArgs.Empty);
-                this.Close();
-            }
-            else
-            {
-                MessageBox.Show("The port entered is not valid. Reverting port settings.", "Invlaid Port");
-                this.Close();
-            }
+            mConfig.Hostname = txtHostname.Text;
+            mConfig.Port = Int32.Parse(txtPort.Text);
+            OnChanged(EventArgs.Empty);
+            this.Close();
         }
     }
 }

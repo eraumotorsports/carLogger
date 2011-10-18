@@ -15,7 +15,7 @@ namespace carLogger
     public partial class Form1 : Form
     {
         #region Status Variables
-        public int mTime;
+        public long mTime;
         public int mFLrpm;
         public int mFRrpm;
         public int mRLrpm;
@@ -25,7 +25,7 @@ namespace carLogger
 
         #region Class Variables
         public Configuration mConfig = new Configuration();
-        public Comm mComm = new Comm();
+        public TCPSocket mSocket = new TCPSocket();
         public Thread mTempThread;
         private StreamWriter mpLogStream;
         private FileStream mpLogFile;
@@ -70,16 +70,24 @@ namespace carLogger
             DateTime start;
             DateTime end;
             mTempThread = Thread.CurrentThread;
+            int errorCount = 0;
 
             while (updateActive)
             {
-                result = mComm.ReadLine();
+                result = mSocket.ReadLine();
                 result = result.Replace("\r", "");
                 ComLog(result);
-                if (result == "COMM ERROR" || result == "TIMEOUT")
+                if (result == "SOCKET ERROR" || result == "TIMEOUT")
                 {
                     mCommError = true;
                     result = "0,0,0,0,0,0";
+                    if (errorCount > 20)
+                    {
+                        mSocket.RefreshSettings();
+                        errorCount = 0;
+                        Thread.Sleep(10);
+                    }
+                    errorCount++;
                 }
                 else
                 {
@@ -88,7 +96,7 @@ namespace carLogger
                     if (status.Length == 6)
                     {
                         //Time
-                        mTime = Int32.Parse(status[0]);
+                        mTime = Int64.Parse(status[0]);
 
                         //Front Left
                         mFLrpm = Int32.Parse(status[1]);
@@ -131,7 +139,7 @@ namespace carLogger
         public void UpdateDisplay()
         {
             lblCommError.Visible = mCommError;
-            lblCommPort.Text = mConfig.Com_Port;
+            lblCommPort.Text = mConfig.Hostname + ":" + mConfig.Port.ToString();
             UpdateRPMs();
             //ClearOldChartPoints();
         }
@@ -142,6 +150,7 @@ namespace carLogger
             lblFRrpm.Text = mFRrpm.ToString();
             lblRLrpm.Text = mRLrpm.ToString();
             lblRRrpm.Text = mRRrpm.ToString();
+            lblCurrent.Text = mCurrent.ToString();
         }
         #endregion
 
@@ -172,7 +181,7 @@ namespace carLogger
 
         public void commChanged(object sender, EventArgs e)
         {
-            mComm.RefreshSettings();
+            mSocket.RefreshSettings();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

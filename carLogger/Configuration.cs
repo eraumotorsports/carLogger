@@ -19,24 +19,24 @@ namespace carLogger
         }
 
         #region Properties
-        public string Com_Port
+        public string Hostname
         {
-            get { return Properties.Settings.Default.com_port; }
+            get { return Properties.Settings.Default.hostname; }
             set
             {
-                Properties.Settings.Default.com_port = value;
+                Properties.Settings.Default.hostname = value;
                 Properties.Settings.Default.Save();
-                NotifyPropertyChanged("CommPort");
+                NotifyPropertyChanged("Hostname");
             }
         }
-        public int Baud_Rate
+        public int Port
         {
-            get { return Properties.Settings.Default.baud_rate; }
+            get { return Properties.Settings.Default.port; }
             set
             {
-                Properties.Settings.Default.baud_rate = value;
+                Properties.Settings.Default.port = value;
                 Properties.Settings.Default.Save();
-                NotifyPropertyChanged("BaudRate");
+                NotifyPropertyChanged("Port");
             }
         }
         public int Timeout

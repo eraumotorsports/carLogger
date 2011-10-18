@@ -43,9 +43,11 @@
             this.lblCommError = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.serialPortToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lblCurrent = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -53,6 +55,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip.SuspendLayout();
             this.menuStrip.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -67,13 +70,13 @@
             // 
             // lblFLrpm
             // 
-            this.lblFLrpm.AutoSize = true;
             this.lblFLrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFLrpm.Location = new System.Drawing.Point(7, 20);
             this.lblFLrpm.Name = "lblFLrpm";
-            this.lblFLrpm.Size = new System.Drawing.Size(48, 25);
+            this.lblFLrpm.Size = new System.Drawing.Size(69, 25);
             this.lblFLrpm.TabIndex = 0;
             this.lblFLrpm.Text = "000";
+            this.lblFLrpm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox2
             // 
@@ -87,13 +90,13 @@
             // 
             // lblFRrpm
             // 
-            this.lblFRrpm.AutoSize = true;
             this.lblFRrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFRrpm.Location = new System.Drawing.Point(7, 20);
             this.lblFRrpm.Name = "lblFRrpm";
-            this.lblFRrpm.Size = new System.Drawing.Size(48, 25);
+            this.lblFRrpm.Size = new System.Drawing.Size(69, 25);
             this.lblFRrpm.TabIndex = 0;
             this.lblFRrpm.Text = "000";
+            this.lblFRrpm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox3
             // 
@@ -107,13 +110,13 @@
             // 
             // lblRRrpm
             // 
-            this.lblRRrpm.AutoSize = true;
             this.lblRRrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRRrpm.Location = new System.Drawing.Point(7, 20);
             this.lblRRrpm.Name = "lblRRrpm";
-            this.lblRRrpm.Size = new System.Drawing.Size(48, 25);
+            this.lblRRrpm.Size = new System.Drawing.Size(69, 25);
             this.lblRRrpm.TabIndex = 0;
             this.lblRRrpm.Text = "000";
+            this.lblRRrpm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // groupBox4
             // 
@@ -127,13 +130,13 @@
             // 
             // lblRLrpm
             // 
-            this.lblRLrpm.AutoSize = true;
             this.lblRLrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRLrpm.Location = new System.Drawing.Point(7, 20);
             this.lblRLrpm.Name = "lblRLrpm";
-            this.lblRLrpm.Size = new System.Drawing.Size(48, 25);
+            this.lblRLrpm.Size = new System.Drawing.Size(69, 25);
             this.lblRLrpm.TabIndex = 0;
             this.lblRLrpm.Text = "000";
+            this.lblRLrpm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -151,7 +154,7 @@
             this.toolStripStatusLabel2,
             this.lblCommPort,
             this.lblCommError});
-            this.statusStrip.Location = new System.Drawing.Point(0, 362);
+            this.statusStrip.Location = new System.Drawing.Point(0, 407);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(567, 22);
             this.statusStrip.TabIndex = 8;
@@ -171,6 +174,7 @@
             // 
             // lblCommError
             // 
+            this.lblCommError.BackColor = System.Drawing.Color.Yellow;
             this.lblCommError.Name = "lblCommError";
             this.lblCommError.Size = new System.Drawing.Size(69, 17);
             this.lblCommError.Text = "CommError";
@@ -194,6 +198,13 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
             // settingsToolStripMenuItem
             // 
             this.settingsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -209,20 +220,34 @@
             this.serialPortToolStripMenuItem.Text = "Serial Port";
             this.serialPortToolStripMenuItem.Click += new System.EventHandler(this.serialPortToolStripMenuItem_Click);
             // 
-            // exitToolStripMenuItem
+            // groupBox5
             // 
-            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.groupBox5.Controls.Add(this.lblCurrent);
+            this.groupBox5.Location = new System.Drawing.Point(144, 324);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(60, 52);
+            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Current";
+            // 
+            // lblCurrent
+            // 
+            this.lblCurrent.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCurrent.Location = new System.Drawing.Point(7, 20);
+            this.lblCurrent.Name = "lblCurrent";
+            this.lblCurrent.Size = new System.Drawing.Size(48, 25);
+            this.lblCurrent.TabIndex = 0;
+            this.lblCurrent.Text = "000";
+            this.lblCurrent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(567, 384);
+            this.ClientSize = new System.Drawing.Size(567, 429);
             this.ControlBox = false;
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.statusStrip);
             this.Controls.Add(this.menuStrip);
             this.Controls.Add(this.groupBox3);
@@ -231,23 +256,20 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
             this.MainMenuStrip = this.menuStrip;
-            this.MinimumSize = new System.Drawing.Size(583, 400);
+            this.MinimumSize = new System.Drawing.Size(583, 445);
             this.Name = "Form1";
             this.Text = "Car Logger";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip.ResumeLayout(false);
             this.statusStrip.PerformLayout();
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,6 +295,8 @@
         private System.Windows.Forms.ToolStripMenuItem serialPortToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel lblCommPort;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label lblCurrent;
     }
 }
 
