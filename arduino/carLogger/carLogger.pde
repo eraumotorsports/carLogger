@@ -1,4 +1,12 @@
+#include <Client.h>
+#include <Configuration.h>
+#include <Debug.h>
+#include <ParsedStream.h>
+#include <Server.h>
+#include <SpiUart.h>
 #include <WiFly.h>
+#include <WiFlyDevice.h>
+#include <_Spi.h>
 
 // Hold the pulse counts for each wheel
 volatile unsigned int cnt1, cnt2, cnt3, cnt4;
@@ -98,9 +106,12 @@ int testData(int offset)
 
 void setup()
 {
+    Serial.begin(9600);
+    Serial.println("open serial");
     WiFly.begin();
 
     if (!WiFly.join("eraumotorsports")) {
+        Serial.println("connect fail");
         while (1) {
             // Hang on failure.
         }
@@ -108,7 +119,6 @@ void setup()
 
     server.begin();
 
-    Serial.begin(9600);
     Serial.print("IP: ");
     Serial.println(WiFly.ip());
 
