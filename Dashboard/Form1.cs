@@ -62,5 +62,10 @@ namespace Dashboard
             else if (windows7Button.Pressed)
                 c1Ribbon1.VisualStyle = VisualStyle.Windows7;
         }
+
+        private void ribbonButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
