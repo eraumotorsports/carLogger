@@ -20,7 +20,7 @@ namespace TestServer
 
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
             IPAddress broadcast = IPAddress.Parse("192.168.1.255");
-            IPEndPoint ep = new IPEndPoint(broadcast, 11000);
+            IPEndPoint ep = new IPEndPoint(broadcast, 12345);
 
             while (true)
             {
@@ -31,9 +31,9 @@ namespace TestServer
 
                 Thread.Sleep(10);
                 if (!down)
-                    i++;
+                    i += 3;
                 else
-                    i--;
+                    i -= 3;
 
                 if (!down && i >= 400)
                     down = true;

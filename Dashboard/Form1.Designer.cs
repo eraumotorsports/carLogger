@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            C1.Win.C1Gauge.C1GaugeSegment c1GaugeSegment5 = new C1.Win.C1Gauge.C1GaugeSegment();
-            C1.Win.C1Gauge.C1GaugeLabels c1GaugeLabels13 = new C1.Win.C1Gauge.C1GaugeLabels();
-            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks21 = new C1.Win.C1Gauge.C1GaugeMarks();
-            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks22 = new C1.Win.C1Gauge.C1GaugeMarks();
-            C1.Win.C1Gauge.C1GaugeLabels c1GaugeLabels14 = new C1.Win.C1Gauge.C1GaugeLabels();
-            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks23 = new C1.Win.C1Gauge.C1GaugeMarks();
-            C1.Win.C1Gauge.C1GaugeEllipse c1GaugeEllipse13 = new C1.Win.C1Gauge.C1GaugeEllipse();
-            C1.Win.C1Gauge.C1GaugeEllipse c1GaugeEllipse14 = new C1.Win.C1Gauge.C1GaugeEllipse();
-            C1.Win.C1Gauge.C1GaugeCaption c1GaugeCaption13 = new C1.Win.C1Gauge.C1GaugeCaption();
-            C1.Win.C1Gauge.C1GaugeCaption c1GaugeCaption14 = new C1.Win.C1Gauge.C1GaugeCaption();
-            C1.Win.C1Gauge.C1GaugeCaption c1GaugeCaption15 = new C1.Win.C1Gauge.C1GaugeCaption();
-            C1.Win.C1Gauge.C1GaugeRange c1GaugeRange9 = new C1.Win.C1Gauge.C1GaugeRange();
-            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks24 = new C1.Win.C1Gauge.C1GaugeMarks();
-            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks25 = new C1.Win.C1Gauge.C1GaugeMarks();
-            C1.Win.C1Gauge.C1GaugeLabels c1GaugeLabels15 = new C1.Win.C1Gauge.C1GaugeLabels();
-            C1.Win.C1Gauge.C1GaugeSingleMark c1GaugeSingleMark5 = new C1.Win.C1Gauge.C1GaugeSingleMark();
-            C1.Win.C1Gauge.C1GaugeRange c1GaugeRange10 = new C1.Win.C1Gauge.C1GaugeRange();
-            C1.Win.C1Gauge.C1GaugeEllipse c1GaugeEllipse15 = new C1.Win.C1Gauge.C1GaugeEllipse();
+            C1.Win.C1Gauge.C1GaugeSegment c1GaugeSegment2 = new C1.Win.C1Gauge.C1GaugeSegment();
+            C1.Win.C1Gauge.C1GaugeLabels c1GaugeLabels4 = new C1.Win.C1Gauge.C1GaugeLabels();
+            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks6 = new C1.Win.C1Gauge.C1GaugeMarks();
+            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks7 = new C1.Win.C1Gauge.C1GaugeMarks();
+            C1.Win.C1Gauge.C1GaugeLabels c1GaugeLabels5 = new C1.Win.C1Gauge.C1GaugeLabels();
+            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks8 = new C1.Win.C1Gauge.C1GaugeMarks();
+            C1.Win.C1Gauge.C1GaugeEllipse c1GaugeEllipse4 = new C1.Win.C1Gauge.C1GaugeEllipse();
+            C1.Win.C1Gauge.C1GaugeEllipse c1GaugeEllipse5 = new C1.Win.C1Gauge.C1GaugeEllipse();
+            C1.Win.C1Gauge.C1GaugeCaption c1GaugeCaption4 = new C1.Win.C1Gauge.C1GaugeCaption();
+            C1.Win.C1Gauge.C1GaugeCaption c1GaugeCaption5 = new C1.Win.C1Gauge.C1GaugeCaption();
+            C1.Win.C1Gauge.C1GaugeCaption c1GaugeCaption6 = new C1.Win.C1Gauge.C1GaugeCaption();
+            C1.Win.C1Gauge.C1GaugeRange c1GaugeRange3 = new C1.Win.C1Gauge.C1GaugeRange();
+            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks9 = new C1.Win.C1Gauge.C1GaugeMarks();
+            C1.Win.C1Gauge.C1GaugeMarks c1GaugeMarks10 = new C1.Win.C1Gauge.C1GaugeMarks();
+            C1.Win.C1Gauge.C1GaugeLabels c1GaugeLabels6 = new C1.Win.C1Gauge.C1GaugeLabels();
+            C1.Win.C1Gauge.C1GaugeSingleMark c1GaugeSingleMark2 = new C1.Win.C1Gauge.C1GaugeSingleMark();
+            C1.Win.C1Gauge.C1GaugeRange c1GaugeRange4 = new C1.Win.C1Gauge.C1GaugeRange();
+            C1.Win.C1Gauge.C1GaugeEllipse c1GaugeEllipse6 = new C1.Win.C1Gauge.C1GaugeEllipse();
             this.c1Ribbon1 = new C1.Win.C1Ribbon.C1Ribbon();
             this.ribbonApplicationMenu1 = new C1.Win.C1Ribbon.RibbonApplicationMenu();
             this.ribbonConfigToolBar1 = new C1.Win.C1Ribbon.RibbonConfigToolBar();
@@ -70,6 +70,10 @@
             this.c1SplitContainer1 = new C1.Win.C1SplitContainer.C1SplitContainer();
             this.c1SplitterPanel1 = new C1.Win.C1SplitContainer.C1SplitterPanel();
             this.c1Sizer1 = new C1.Win.C1Sizer.C1Sizer();
+            this.lblRLrpm = new C1.Win.C1SuperTooltip.C1SuperLabel();
+            this.lblFLrpm = new C1.Win.C1SuperTooltip.C1SuperLabel();
+            this.lblRRrpm = new C1.Win.C1SuperTooltip.C1SuperLabel();
+            this.lblFRrpm = new C1.Win.C1SuperTooltip.C1SuperLabel();
             this.c1PictureBox1 = new C1.Win.C1Input.C1PictureBox();
             this.c1SplitterPanel2 = new C1.Win.C1SplitContainer.C1SplitterPanel();
             this.c1Gauge2 = new C1.Win.C1Gauge.C1Gauge();
@@ -77,10 +81,6 @@
             this.c1SplitterPanel3 = new C1.Win.C1SplitContainer.C1SplitterPanel();
             this.c1Gauge1 = new C1.Win.C1Gauge.C1Gauge();
             this.tachometer = new C1.Win.C1Gauge.C1RadialGauge();
-            this.c1SuperLabel1 = new C1.Win.C1SuperTooltip.C1SuperLabel();
-            this.c1SuperLabel2 = new C1.Win.C1SuperTooltip.C1SuperLabel();
-            this.c1SuperLabel3 = new C1.Win.C1SuperTooltip.C1SuperLabel();
-            this.c1SuperLabel4 = new C1.Win.C1SuperTooltip.C1SuperLabel();
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1StatusBar1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1SplitContainer1)).BeginInit();
@@ -260,29 +260,74 @@
             // 
             // c1SplitterPanel1
             // 
+            this.c1SplitterPanel1.Collapsible = true;
             this.c1SplitterPanel1.Controls.Add(this.c1Sizer1);
             this.c1SplitterPanel1.Dock = C1.Win.C1SplitContainer.PanelDockStyle.Left;
             this.c1SplitterPanel1.Location = new System.Drawing.Point(0, 21);
             this.c1SplitterPanel1.Name = "c1SplitterPanel1";
-            this.c1SplitterPanel1.Size = new System.Drawing.Size(454, 497);
+            this.c1SplitterPanel1.Size = new System.Drawing.Size(447, 497);
             this.c1SplitterPanel1.TabIndex = 0;
             this.c1SplitterPanel1.Text = "Wheel Speed";
             this.c1SplitterPanel1.Width = 454;
             // 
             // c1Sizer1
             // 
-            this.c1Sizer1.Controls.Add(this.c1SuperLabel3);
-            this.c1Sizer1.Controls.Add(this.c1SuperLabel4);
-            this.c1Sizer1.Controls.Add(this.c1SuperLabel2);
-            this.c1Sizer1.Controls.Add(this.c1SuperLabel1);
+            this.c1Sizer1.Controls.Add(this.lblRLrpm);
+            this.c1Sizer1.Controls.Add(this.lblFLrpm);
+            this.c1Sizer1.Controls.Add(this.lblRRrpm);
+            this.c1Sizer1.Controls.Add(this.lblFRrpm);
             this.c1Sizer1.Controls.Add(this.c1PictureBox1);
             this.c1Sizer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.c1Sizer1.GridDefinition = resources.GetString("c1Sizer1.GridDefinition");
             this.c1Sizer1.Location = new System.Drawing.Point(0, 0);
             this.c1Sizer1.Name = "c1Sizer1";
-            this.c1Sizer1.Size = new System.Drawing.Size(454, 497);
+            this.c1Sizer1.Size = new System.Drawing.Size(447, 497);
             this.c1Sizer1.TabIndex = 0;
             this.c1Sizer1.Text = "c1Sizer1";
+            // 
+            // lblRLrpm
+            // 
+            this.lblRLrpm.AutoSize = true;
+            this.lblRLrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRLrpm.Location = new System.Drawing.Point(43, 402);
+            this.lblRLrpm.Name = "lblRLrpm";
+            this.lblRLrpm.Size = new System.Drawing.Size(54, 39);
+            this.lblRLrpm.TabIndex = 8;
+            this.lblRLrpm.Text = "000";
+            this.lblRLrpm.UseMnemonic = true;
+            // 
+            // lblFLrpm
+            // 
+            this.lblFLrpm.AutoSize = true;
+            this.lblFLrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFLrpm.Location = new System.Drawing.Point(43, 142);
+            this.lblFLrpm.Name = "lblFLrpm";
+            this.lblFLrpm.Size = new System.Drawing.Size(54, 39);
+            this.lblFLrpm.TabIndex = 7;
+            this.lblFLrpm.Text = "000";
+            this.lblFLrpm.UseMnemonic = true;
+            // 
+            // lblRRrpm
+            // 
+            this.lblRRrpm.AutoSize = true;
+            this.lblRRrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRRrpm.Location = new System.Drawing.Point(351, 402);
+            this.lblRRrpm.Name = "lblRRrpm";
+            this.lblRRrpm.Size = new System.Drawing.Size(54, 39);
+            this.lblRRrpm.TabIndex = 6;
+            this.lblRRrpm.Text = "000";
+            this.lblRRrpm.UseMnemonic = true;
+            // 
+            // lblFRrpm
+            // 
+            this.lblFRrpm.AutoSize = true;
+            this.lblFRrpm.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFRrpm.Location = new System.Drawing.Point(351, 142);
+            this.lblFRrpm.Name = "lblFRrpm";
+            this.lblFRrpm.Size = new System.Drawing.Size(54, 39);
+            this.lblFRrpm.TabIndex = 5;
+            this.lblFRrpm.Text = "000";
+            this.lblFRrpm.UseMnemonic = true;
             // 
             // c1PictureBox1
             // 
@@ -290,18 +335,19 @@
             this.c1PictureBox1.Image = global::Dashboard.Properties.Resources.Top_View1;
             this.c1PictureBox1.Location = new System.Drawing.Point(0, 0);
             this.c1PictureBox1.Name = "c1PictureBox1";
-            this.c1PictureBox1.Size = new System.Drawing.Size(454, 497);
+            this.c1PictureBox1.Size = new System.Drawing.Size(447, 497);
             this.c1PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.c1PictureBox1.TabIndex = 0;
             this.c1PictureBox1.TabStop = false;
             // 
             // c1SplitterPanel2
             // 
+            this.c1SplitterPanel2.Collapsible = true;
             this.c1SplitterPanel2.Controls.Add(this.c1Gauge2);
             this.c1SplitterPanel2.Height = 257;
             this.c1SplitterPanel2.Location = new System.Drawing.Point(458, 21);
             this.c1SplitterPanel2.Name = "c1SplitterPanel2";
-            this.c1SplitterPanel2.Size = new System.Drawing.Size(455, 236);
+            this.c1SplitterPanel2.Size = new System.Drawing.Size(455, 229);
             this.c1SplitterPanel2.TabIndex = 1;
             this.c1SplitterPanel2.Text = "Speedometer";
             // 
@@ -312,7 +358,7 @@
             this.speedometer});
             this.c1Gauge2.Location = new System.Drawing.Point(0, 0);
             this.c1Gauge2.Name = "c1Gauge2";
-            this.c1Gauge2.Size = new System.Drawing.Size(455, 236);
+            this.c1Gauge2.Size = new System.Drawing.Size(455, 229);
             this.c1Gauge2.TabIndex = 1;
             this.c1Gauge2.ViewTag = ((long)(637948720373630351));
             // 
@@ -326,99 +372,99 @@
             this.speedometer.Cap.Gradient.Direction = C1.Win.C1Gauge.C1GaugeGradientDirection.RadialInner;
             this.speedometer.Cap.Gradient.FocusScaleX = 0.3D;
             this.speedometer.Cap.Radius = 18D;
-            c1GaugeSegment5.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeSegment5.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.Gradient;
-            c1GaugeSegment5.Filling.Color = System.Drawing.Color.Gray;
-            c1GaugeSegment5.Filling.Color2 = System.Drawing.Color.White;
-            c1GaugeSegment5.Filling.Opacity = 0.2D;
-            c1GaugeSegment5.Filling.Opacity2 = 0.1D;
-            c1GaugeSegment5.Gradient.Direction = C1.Win.C1Gauge.C1GaugeGradientDirection.BackwardDiagonal;
-            c1GaugeSegment5.Gradient.Falloff = C1.Win.C1Gauge.C1GaugeGradientFalloff.Triangular;
-            c1GaugeSegment5.InnerRadius = 110D;
-            c1GaugeSegment5.SweepAngle = 180D;
+            c1GaugeSegment2.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeSegment2.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.Gradient;
+            c1GaugeSegment2.Filling.Color = System.Drawing.Color.Gray;
+            c1GaugeSegment2.Filling.Color2 = System.Drawing.Color.White;
+            c1GaugeSegment2.Filling.Opacity = 0.2D;
+            c1GaugeSegment2.Filling.Opacity2 = 0.1D;
+            c1GaugeSegment2.Gradient.Direction = C1.Win.C1Gauge.C1GaugeGradientDirection.BackwardDiagonal;
+            c1GaugeSegment2.Gradient.Falloff = C1.Win.C1Gauge.C1GaugeGradientFalloff.Triangular;
+            c1GaugeSegment2.InnerRadius = 110D;
+            c1GaugeSegment2.SweepAngle = 180D;
             this.speedometer.CoverShapes.AddRange(new C1.Win.C1Gauge.C1GaugeBaseShape[] {
-            c1GaugeSegment5});
-            c1GaugeLabels13.Color = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            c1GaugeLabels13.FontSize = 10D;
-            c1GaugeLabels13.Interval = 10D;
-            c1GaugeLabels13.Location = 78D;
-            c1GaugeLabels13.ViewTag = ((long)(733665273754454522));
-            c1GaugeMarks21.Alignment = C1.Win.C1Gauge.C1GaugeAlignment.Out;
-            c1GaugeMarks21.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            c1GaugeMarks21.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeMarks21.Filling.Color = System.Drawing.Color.Silver;
-            c1GaugeMarks21.Interval = 10D;
-            c1GaugeMarks21.Length = 12D;
-            c1GaugeMarks21.Location = 88D;
-            c1GaugeMarks21.ViewTag = ((long)(734228223707875834));
-            c1GaugeMarks21.Width = 2D;
-            c1GaugeMarks22.Alignment = C1.Win.C1Gauge.C1GaugeAlignment.Out;
-            c1GaugeMarks22.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            c1GaugeMarks22.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeMarks22.Filling.Color = System.Drawing.Color.Silver;
-            c1GaugeMarks22.Interval = 5D;
-            c1GaugeMarks22.Length = 8D;
-            c1GaugeMarks22.Location = 92D;
-            c1GaugeMarks22.ViewTag = ((long)(734791173661297146));
-            c1GaugeMarks22.Width = 1D;
-            c1GaugeLabels14.Color = System.Drawing.Color.Silver;
-            c1GaugeLabels14.FontSize = 8D;
-            c1GaugeLabels14.Interval = 12.5D;
-            c1GaugeLabels14.Location = 60D;
-            c1GaugeLabels14.SequenceNo = 1;
-            c1GaugeLabels14.ValueFactor = 1.6D;
-            c1GaugeLabels14.ViewTag = ((long)(735354123614718458));
-            c1GaugeMarks23.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeMarks23.Filling.Color = System.Drawing.Color.Silver;
-            c1GaugeMarks23.Interval = 12.5D;
-            c1GaugeMarks23.Length = 10D;
-            c1GaugeMarks23.Location = 45D;
-            c1GaugeMarks23.SequenceNo = 1;
-            c1GaugeMarks23.ViewTag = ((long)(735917073568139770));
-            c1GaugeMarks23.Width = 3D;
+            c1GaugeSegment2});
+            c1GaugeLabels4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            c1GaugeLabels4.FontSize = 10D;
+            c1GaugeLabels4.Interval = 10D;
+            c1GaugeLabels4.Location = 78D;
+            c1GaugeLabels4.ViewTag = ((long)(733665273754454522));
+            c1GaugeMarks6.Alignment = C1.Win.C1Gauge.C1GaugeAlignment.Out;
+            c1GaugeMarks6.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            c1GaugeMarks6.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeMarks6.Filling.Color = System.Drawing.Color.Silver;
+            c1GaugeMarks6.Interval = 10D;
+            c1GaugeMarks6.Length = 12D;
+            c1GaugeMarks6.Location = 88D;
+            c1GaugeMarks6.ViewTag = ((long)(734228223707875834));
+            c1GaugeMarks6.Width = 2D;
+            c1GaugeMarks7.Alignment = C1.Win.C1Gauge.C1GaugeAlignment.Out;
+            c1GaugeMarks7.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            c1GaugeMarks7.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeMarks7.Filling.Color = System.Drawing.Color.Silver;
+            c1GaugeMarks7.Interval = 5D;
+            c1GaugeMarks7.Length = 8D;
+            c1GaugeMarks7.Location = 92D;
+            c1GaugeMarks7.ViewTag = ((long)(734791173661297146));
+            c1GaugeMarks7.Width = 1D;
+            c1GaugeLabels5.Color = System.Drawing.Color.Silver;
+            c1GaugeLabels5.FontSize = 8D;
+            c1GaugeLabels5.Interval = 12.5D;
+            c1GaugeLabels5.Location = 60D;
+            c1GaugeLabels5.SequenceNo = 1;
+            c1GaugeLabels5.ValueFactor = 1.6D;
+            c1GaugeLabels5.ViewTag = ((long)(735354123614718458));
+            c1GaugeMarks8.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeMarks8.Filling.Color = System.Drawing.Color.Silver;
+            c1GaugeMarks8.Interval = 12.5D;
+            c1GaugeMarks8.Length = 10D;
+            c1GaugeMarks8.Location = 45D;
+            c1GaugeMarks8.SequenceNo = 1;
+            c1GaugeMarks8.ViewTag = ((long)(735917073568139770));
+            c1GaugeMarks8.Width = 3D;
             this.speedometer.Decorators.AddRange(new C1.Win.C1Gauge.C1GaugeDecorator[] {
-            c1GaugeLabels13,
-            c1GaugeMarks21,
-            c1GaugeMarks22,
-            c1GaugeLabels14,
-            c1GaugeMarks23});
-            c1GaugeEllipse13.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            c1GaugeEllipse13.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.Gradient;
-            c1GaugeEllipse13.Filling.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            c1GaugeEllipse13.Filling.Color2 = System.Drawing.Color.Gray;
-            c1GaugeEllipse13.Filling.SwapColors = true;
-            c1GaugeEllipse13.Height = -1.03D;
-            c1GaugeEllipse13.HitTestable = false;
-            c1GaugeEllipse13.Width = -1.03D;
-            c1GaugeEllipse14.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            c1GaugeEllipse14.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.Gradient;
-            c1GaugeEllipse14.Filling.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            c1GaugeEllipse14.Filling.Color2 = System.Drawing.Color.Gray;
-            c1GaugeEllipse14.Gradient.Direction = C1.Win.C1Gauge.C1GaugeGradientDirection.RadialOuter;
-            c1GaugeEllipse14.Gradient.Falloff = C1.Win.C1Gauge.C1GaugeGradientFalloff.Triangular;
-            c1GaugeEllipse14.Gradient.Focus = 0.3D;
-            c1GaugeEllipse14.HitTestable = false;
-            c1GaugeCaption13.CenterPointX = 0.3D;
-            c1GaugeCaption13.CenterPointY = 0.75D;
-            c1GaugeCaption13.Color = System.Drawing.Color.Silver;
-            c1GaugeCaption13.FontSize = 11D;
-            c1GaugeCaption13.Text = "MPH";
-            c1GaugeCaption14.CenterPointX = 0.65D;
-            c1GaugeCaption14.CenterPointY = 0.7D;
-            c1GaugeCaption14.Color = System.Drawing.Color.Silver;
-            c1GaugeCaption14.FontSize = 10D;
-            c1GaugeCaption14.Text = "km/h";
-            c1GaugeCaption15.CenterPointY = 0.85D;
-            c1GaugeCaption15.Color = System.Drawing.Color.Silver;
-            c1GaugeCaption15.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            c1GaugeCaption15.FontSize = 12D;
-            c1GaugeCaption15.Text = "Speedometer";
+            c1GaugeLabels4,
+            c1GaugeMarks6,
+            c1GaugeMarks7,
+            c1GaugeLabels5,
+            c1GaugeMarks8});
+            c1GaugeEllipse4.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            c1GaugeEllipse4.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.Gradient;
+            c1GaugeEllipse4.Filling.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            c1GaugeEllipse4.Filling.Color2 = System.Drawing.Color.Gray;
+            c1GaugeEllipse4.Filling.SwapColors = true;
+            c1GaugeEllipse4.Height = -1.03D;
+            c1GaugeEllipse4.HitTestable = false;
+            c1GaugeEllipse4.Width = -1.03D;
+            c1GaugeEllipse5.Border.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            c1GaugeEllipse5.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.Gradient;
+            c1GaugeEllipse5.Filling.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            c1GaugeEllipse5.Filling.Color2 = System.Drawing.Color.Gray;
+            c1GaugeEllipse5.Gradient.Direction = C1.Win.C1Gauge.C1GaugeGradientDirection.RadialOuter;
+            c1GaugeEllipse5.Gradient.Falloff = C1.Win.C1Gauge.C1GaugeGradientFalloff.Triangular;
+            c1GaugeEllipse5.Gradient.Focus = 0.3D;
+            c1GaugeEllipse5.HitTestable = false;
+            c1GaugeCaption4.CenterPointX = 0.3D;
+            c1GaugeCaption4.CenterPointY = 0.75D;
+            c1GaugeCaption4.Color = System.Drawing.Color.Silver;
+            c1GaugeCaption4.FontSize = 11D;
+            c1GaugeCaption4.Text = "MPH";
+            c1GaugeCaption5.CenterPointX = 0.65D;
+            c1GaugeCaption5.CenterPointY = 0.7D;
+            c1GaugeCaption5.Color = System.Drawing.Color.Silver;
+            c1GaugeCaption5.FontSize = 10D;
+            c1GaugeCaption5.Text = "km/h";
+            c1GaugeCaption6.CenterPointY = 0.85D;
+            c1GaugeCaption6.Color = System.Drawing.Color.Silver;
+            c1GaugeCaption6.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            c1GaugeCaption6.FontSize = 12D;
+            c1GaugeCaption6.Text = "Speedometer";
             this.speedometer.FaceShapes.AddRange(new C1.Win.C1Gauge.C1GaugeBaseShape[] {
-            c1GaugeEllipse13,
-            c1GaugeEllipse14,
-            c1GaugeCaption13,
-            c1GaugeCaption14,
-            c1GaugeCaption15});
+            c1GaugeEllipse4,
+            c1GaugeEllipse5,
+            c1GaugeCaption4,
+            c1GaugeCaption5,
+            c1GaugeCaption6});
             this.speedometer.Maximum = 150D;
             this.speedometer.Name = "speedometer";
             this.speedometer.Pointer.Border.Color = System.Drawing.Color.DarkOrange;
@@ -438,6 +484,7 @@
             // 
             // c1SplitterPanel3
             // 
+            this.c1SplitterPanel3.Collapsible = true;
             this.c1SplitterPanel3.Controls.Add(this.c1Gauge1);
             this.c1SplitterPanel3.Height = 100;
             this.c1SplitterPanel3.Location = new System.Drawing.Point(458, 282);
@@ -460,49 +507,49 @@
             // tachometer
             // 
             this.tachometer.Cap.Filling.Color = System.Drawing.Color.Black;
-            c1GaugeRange9.Location = 85D;
-            c1GaugeRange9.ValueColors.AddRange(new C1.Win.C1Gauge.C1GaugeValueColor[] {
+            c1GaugeRange3.Location = 85D;
+            c1GaugeRange3.ValueColors.AddRange(new C1.Win.C1Gauge.C1GaugeValueColor[] {
             new C1.Win.C1Gauge.C1GaugeValueColor(0D, -1, System.Drawing.Color.Yellow, 1D, ((long)(676447993969756355))),
             new C1.Win.C1Gauge.C1GaugeValueColor(100D, -1, System.Drawing.Color.Red, 1D, ((long)(676729468951747539)))});
-            c1GaugeRange9.ViewTag = ((long)(675322092466294085));
-            c1GaugeMarks24.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeMarks24.Filling.Color = System.Drawing.Color.Black;
-            c1GaugeMarks24.Interval = 10D;
-            c1GaugeMarks24.Length = 20D;
-            c1GaugeMarks24.ViewTag = ((long)(675603567464906931));
-            c1GaugeMarks24.Width = 2D;
-            c1GaugeMarks25.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeMarks25.Filling.Color = System.Drawing.Color.Black;
-            c1GaugeMarks25.Interval = 5D;
-            c1GaugeMarks25.ViewTag = ((long)(675885042467390164));
-            c1GaugeMarks25.Width = 1D;
-            c1GaugeLabels15.FontSize = 14D;
-            c1GaugeLabels15.Interval = 10D;
-            c1GaugeLabels15.ViewTag = ((long)(676166517467893199));
-            c1GaugeSingleMark5.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeSingleMark5.Filling.Color = System.Drawing.Color.Black;
-            c1GaugeSingleMark5.Length = 8D;
-            c1GaugeSingleMark5.OrthogonalAlignment = C1.Win.C1Gauge.C1GaugeAlignment.In;
-            c1GaugeSingleMark5.Shape = C1.Win.C1Gauge.C1GaugeMarkShape.Round;
-            c1GaugeSingleMark5.ViewTag = ((long)(677010946854350755));
-            c1GaugeSingleMark5.Width = 8D;
-            c1GaugeRange10.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
-            c1GaugeRange10.Filling.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            c1GaugeRange10.From = 75D;
-            c1GaugeRange10.ViewTag = ((long)(677292422938942188));
+            c1GaugeRange3.ViewTag = ((long)(675322092466294085));
+            c1GaugeMarks9.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeMarks9.Filling.Color = System.Drawing.Color.Black;
+            c1GaugeMarks9.Interval = 10D;
+            c1GaugeMarks9.Length = 20D;
+            c1GaugeMarks9.ViewTag = ((long)(675603567464906931));
+            c1GaugeMarks9.Width = 2D;
+            c1GaugeMarks10.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeMarks10.Filling.Color = System.Drawing.Color.Black;
+            c1GaugeMarks10.Interval = 5D;
+            c1GaugeMarks10.ViewTag = ((long)(675885042467390164));
+            c1GaugeMarks10.Width = 1D;
+            c1GaugeLabels6.FontSize = 14D;
+            c1GaugeLabels6.Interval = 10D;
+            c1GaugeLabels6.ViewTag = ((long)(676166517467893199));
+            c1GaugeSingleMark2.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeSingleMark2.Filling.Color = System.Drawing.Color.Black;
+            c1GaugeSingleMark2.Length = 8D;
+            c1GaugeSingleMark2.OrthogonalAlignment = C1.Win.C1Gauge.C1GaugeAlignment.In;
+            c1GaugeSingleMark2.Shape = C1.Win.C1Gauge.C1GaugeMarkShape.Round;
+            c1GaugeSingleMark2.ViewTag = ((long)(677010946854350755));
+            c1GaugeSingleMark2.Width = 8D;
+            c1GaugeRange4.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
+            c1GaugeRange4.Filling.Color = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            c1GaugeRange4.From = 75D;
+            c1GaugeRange4.ViewTag = ((long)(677292422938942188));
             this.tachometer.Decorators.AddRange(new C1.Win.C1Gauge.C1GaugeDecorator[] {
-            c1GaugeRange9,
-            c1GaugeMarks24,
-            c1GaugeMarks25,
-            c1GaugeLabels15,
-            c1GaugeSingleMark5,
-            c1GaugeRange10});
-            c1GaugeEllipse15.Border.Color = System.Drawing.Color.Black;
-            c1GaugeEllipse15.Border.Thickness = 1.5D;
-            c1GaugeEllipse15.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.None;
-            c1GaugeEllipse15.HitTestable = false;
+            c1GaugeRange3,
+            c1GaugeMarks9,
+            c1GaugeMarks10,
+            c1GaugeLabels6,
+            c1GaugeSingleMark2,
+            c1GaugeRange4});
+            c1GaugeEllipse6.Border.Color = System.Drawing.Color.Black;
+            c1GaugeEllipse6.Border.Thickness = 1.5D;
+            c1GaugeEllipse6.Filling.BrushType = C1.Win.C1Gauge.C1GaugeBrushType.None;
+            c1GaugeEllipse6.HitTestable = false;
             this.tachometer.FaceShapes.AddRange(new C1.Win.C1Gauge.C1GaugeBaseShape[] {
-            c1GaugeEllipse15});
+            c1GaugeEllipse6});
             this.tachometer.Name = "tachometer";
             this.tachometer.OffAngle = -135D;
             this.tachometer.Pointer.Border.LineStyle = C1.Win.C1Gauge.C1GaugeBorderStyle.None;
@@ -516,50 +563,6 @@
             this.tachometer.StartAngle = -120D;
             this.tachometer.ViewTag = ((long)(674759141870818574));
             // 
-            // c1SuperLabel1
-            // 
-            this.c1SuperLabel1.AutoSize = true;
-            this.c1SuperLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c1SuperLabel1.Location = new System.Drawing.Point(357, 142);
-            this.c1SuperLabel1.Name = "c1SuperLabel1";
-            this.c1SuperLabel1.Size = new System.Drawing.Size(54, 39);
-            this.c1SuperLabel1.TabIndex = 5;
-            this.c1SuperLabel1.Text = "000";
-            this.c1SuperLabel1.UseMnemonic = true;
-            // 
-            // c1SuperLabel2
-            // 
-            this.c1SuperLabel2.AutoSize = true;
-            this.c1SuperLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c1SuperLabel2.Location = new System.Drawing.Point(357, 402);
-            this.c1SuperLabel2.Name = "c1SuperLabel2";
-            this.c1SuperLabel2.Size = new System.Drawing.Size(54, 39);
-            this.c1SuperLabel2.TabIndex = 6;
-            this.c1SuperLabel2.Text = "000";
-            this.c1SuperLabel2.UseMnemonic = true;
-            // 
-            // c1SuperLabel3
-            // 
-            this.c1SuperLabel3.AutoSize = true;
-            this.c1SuperLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c1SuperLabel3.Location = new System.Drawing.Point(44, 402);
-            this.c1SuperLabel3.Name = "c1SuperLabel3";
-            this.c1SuperLabel3.Size = new System.Drawing.Size(54, 39);
-            this.c1SuperLabel3.TabIndex = 8;
-            this.c1SuperLabel3.Text = "000";
-            this.c1SuperLabel3.UseMnemonic = true;
-            // 
-            // c1SuperLabel4
-            // 
-            this.c1SuperLabel4.AutoSize = true;
-            this.c1SuperLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.c1SuperLabel4.Location = new System.Drawing.Point(44, 142);
-            this.c1SuperLabel4.Name = "c1SuperLabel4";
-            this.c1SuperLabel4.Size = new System.Drawing.Size(54, 39);
-            this.c1SuperLabel4.TabIndex = 7;
-            this.c1SuperLabel4.Text = "000";
-            this.c1SuperLabel4.UseMnemonic = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -571,6 +574,7 @@
             this.Name = "Form1";
             this.Text = "Dashboard";
             this.VisualStyleHolder = C1.Win.C1Ribbon.VisualStyle.Windows7;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.c1Ribbon1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.c1StatusBar1)).EndInit();
@@ -622,10 +626,10 @@
         private C1.Win.C1SplitContainer.C1SplitterPanel c1SplitterPanel3;
         private C1.Win.C1Sizer.C1Sizer c1Sizer1;
         private C1.Win.C1Input.C1PictureBox c1PictureBox1;
-        private C1.Win.C1SuperTooltip.C1SuperLabel c1SuperLabel1;
-        private C1.Win.C1SuperTooltip.C1SuperLabel c1SuperLabel3;
-        private C1.Win.C1SuperTooltip.C1SuperLabel c1SuperLabel4;
-        private C1.Win.C1SuperTooltip.C1SuperLabel c1SuperLabel2;
+        private C1.Win.C1SuperTooltip.C1SuperLabel lblFRrpm;
+        private C1.Win.C1SuperTooltip.C1SuperLabel lblRLrpm;
+        private C1.Win.C1SuperTooltip.C1SuperLabel lblFLrpm;
+        private C1.Win.C1SuperTooltip.C1SuperLabel lblRRrpm;
     }
 }
 
